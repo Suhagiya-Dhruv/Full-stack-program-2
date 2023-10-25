@@ -115,3 +115,5 @@ Here are some of the most commonly used HTML tags:
 - `<table>`, `<tr>`, `<th>`, `<td>`: Used for creating tables to display tabular data.
 
 These tags form the foundation of most HTML documents and are essential for structuring and styling web content.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
