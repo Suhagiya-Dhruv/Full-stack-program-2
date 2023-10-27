@@ -3,132 +3,161 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML INTRO</title>
-        <!-- <link rel="stylesheet" href="style.css">
-        <script src></script> -->
+        <title>Document</title>
+        <style>
+            /* div{
+                color: blue;
+            } */
+
+            /* .blue{
+                color: red
+            }   
+
+            .blue1{
+                color: green;
+                font-weight: bold;
+            }  */
+
+            /* .blue, #blue,
+            .blue1{
+                text-decoration: underline;
+            } */
+            
+            /* #blue{ */
+                /* font-size: 24px;  /* by defualt 16px */
+                /* font-style: italic; */
+            /* } */
+
+            /* *{
+                color:red;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 25px;
+            } */
+
+            /* .m1.m2{
+                color:blue;
+            } */
+
+             /* [type="text"]{
+                color:blue;
+            }  */
+
+            /* div >p{
+                color:blue;   
+            } */
+
+            /* div p{
+                color:blue;   
+            } */
+
+            /* div + p{
+                color:blue;
+            } */
+
+            /* div ~ p{
+                color:blue;
+            } */
+
+            /* p:hover{
+                color:blue;
+            } */
+
+            /* p::first-letter{
+                color:red;
+                font-size: 24px;
+
+            } */
+
+            /* p::first-line{
+                color:blue;
+            } */
+        </style>
     </head>
     <body>
+        <!-- <div style="color:red; font-size: 24px;">Inline CSS</div> -->
+        <!-- <div>Internal CSS</div> -->
+        <!-- <div>External CSS</div> -->
 
-        <!-- self-closing -->
-        <!-- closing -->
-        <!-- semantic -->
-        <!-- <header></header> -->
+        <!-- <h1>
+            CSS Selector
+        </h1>
 
-        <!-- normal tag -->
-        <!-- <h2>HTML Element</h2>
-        <p>The article element specifies independent, self-contained content.</p>
-        <p>An article should make sense on its own, and it should be possible to
-            distribute it independently from the rest of the web site.</p>
-        <p>Examples of where the article element can be used:</p> -->
+        <div class="blue">
+            Class Seclector 1
+        </div>
 
-        <!-- order list/ unorder list -->
-        <!-- <ul>
-            <li>Forum posts</li>
-            <li>Blog posts</li>
-            <li>User comments</li>
-            <li>Product cards</li>
-            <li>Newspaper articles</li>
-        </ul> -->
+        <div class="blue1">
+            Class Seclector 2
+        </div>
 
-        <!-- <h3>Example</h3>
+        <div id="blue">
+            Id Seclector
+        </div> -->
 
-        <p>Three &lt;/articles&gt; with <u>Hello</u> independent self-contained
-            content: </p> -->
+        <!-- <div class="m1 m2 m3">Select me</div>
+        <div class="m1">Don't select me</div>
+        <div class="m2">Don't select me</div> -->
 
-        <!-- anchor tag -->
-        <!-- <a href="https://www.google.com">Google</a> -->
+        <!-- <input type="text" value="Hello" />
+        <input type="number" /> -->
 
-        <!-- 
-             details list
-         table tag -> th table head -> tr -> table row -> td -> table data/column
-         input tag
-         button
-         form
-         select
-         bold -> b
-         italic -> i
-         underline -> u
-    -->
+        <!-- <div>
+            <p>Select Me</p>
+        </div>
+        <div>Don't select me</div>
+        <p>Don't select me</p> -->
 
-        <!-- <dl>
-            <dt>Title 1</dt>
-            <dd> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores ullam voluptatibus, perferendis laborum deleniti non!</dd>
-            <dt>Title 2</dt>
-            <dd> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores ullam voluptatibus, perferendis laborum deleniti non!</dd>
-        </dl> -->
+        <!-- <div>
+            <p>Select Me</p>
+        </div>
+        <div>Don't select me</div>
+        <p>Don't select me</p>
+        <div>
+            <span>
+                <p>Select me</p>
+            </span>
+        </div> -->
 
-        <!-- <table border="1">
-            <tr>
-                <td rowspan="2">C1</td>
-                <td colspan="2">C2</td>
-                <td rowspan="2">C4</td>
-            </tr>
+        <!-- <p>Don't Select me</p>
+        <div>Don't select me</div>
+        <p>Select me</p>
+        <p>Select me</p>
+        <div>
+            <p>Don't select me</p>
+        </div>
+        <p>Select me</p> -->
 
-            <tr>
-                <td>C6</td>
-                <td>C7</td>
-            </tr>
+        <!-- <button>Click me</button> -->
 
-            <tr>
-                <td>C9</td>
-                <td>C10</td>
-                <td>C11</td>
-                <td>C12</td>
-            </tr>
+        <style>
+            /* unvisited link */
+            a:link {
+              color: red;
+            }
+            
+            /* visited link */
+            a:visited {
+              color: yellow;
+            }
+            
+            /* mouse over link */
+            a:hover {
+              color: hotpink;
+            }
+            
+            /* selected link */
+            a:active {
+              color: blue;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <h2>Styling a link depending on state</h2>
+            
+            <p><b><a href="https://www.google.co.in">This is a link</a></b></p>
+            <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+            <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
 
-            <tr>
-                <td>C13</td>
-                <td>C14</td>
-                <td>C15</td>
-                <td>C16</td>
-            </tr>
-        </table> -->
-
-        <!-- <input type="text" placeholder="Enter your name" />
-        <input type="number" min="-10" max="10"/>
-        <input type="password" placeholder="Enter password" />
-        <input type="submit" value="Click" />
-        <br />
-        <input type="checkbox" /> Remember me
-        <input type="radio" name="gender" /> Male
-        <input type="radio" name="gender" /> Female
-        <input type="range" min="10" max="20"/> -->
-
-        <!-- <input type="color" />
-        <input type="time" />
-        <input type="date" />
-        <input type="file" /> -->
-
-        <!-- <input type="submit" value="Click me" />
-        <button>Click me</button> -->
-
-        <!-- <form>
-            <input name="name" placeholder="Enter your name" />
-            <input type="submit" value="Click me" />
-        </form> -->
-
-        <!-- <select>
-            <option value="one"> ONE</option>
-            <option value="two">TWO</option>
-            <option value="three">THREE</option>
-            <option value="four">FOUR</option>
-        </select> -->
-
-        <!-- <lable>Name</lable>
-        <lable>LName</lable> -->
-
-        <!-- <spna>Code</spna>
-        <code>Code</code> -->
-
-        <!-- <input placeholder="Enter Message" />
-        <textarea placeholder="Enter Message"></textarea> -->
-
-        <!-- <img
-            src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" 
-            /> -->
-
-            <img src="D:\space-background-realistic-starry-night-cosmos-shining-stars-milky-way-stardust-color-galaxy_1258-154643.avif"/>
     </body>
 </html>
