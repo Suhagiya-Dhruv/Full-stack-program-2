@@ -3,161 +3,100 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Box Model</title>
         <style>
-            /* div{
-                color: blue;
-            } */
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            div{
+                /* border-width: 5px;
+                border-color: red; 
+                border-style:solid; */
 
-            /* .blue{
-                color: red
-            }   
+                /* border: 1px solid blue; */
 
-            .blue1{
-                color: green;
-                font-weight: bold;
-            }  */
+            }
 
-            /* .blue, #blue,
-            .blue1{
-                text-decoration: underline;
-            } */
-            
-            /* #blue{ */
-                /* font-size: 24px;  /* by defualt 16px */
-                /* font-style: italic; */
+            /* .padding{
+                border: 5px solid blue; */
+                /* padding-top: 20px;
+                padding-bottom: 50px;
+                padding-right: 50px;
+                padding-left: 50px; */
+
+                /* padding: 50px 100px 200px 20px; */
             /* } */
 
-            /* *{
-                color:red;
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size: 25px;
-            } */
+            /* .margin{ */
+                /* border: 1px solid blue; */
+                /* margin-top: 20px;
+                margin-bottom: 50px;
+                margin-right: 50px;
+                margin-left: 50px; */
 
-            /* .m1.m2{
-                color:blue;
-            } */
+                /* margin: 50px 20px 100px 50px; */
+            /* } */
 
-             /* [type="text"]{
-                color:blue;
-            }  */
+            .box_Sizing{
+                /* border: 1px solid blue; */
+                /* background-color: lightblue;
+                width: 250px;
+                height: 250px;
+                padding: 10px;
+                border: 10px solid blue; */
+                /* box-sizing: content-box; */
+                /* box-sizing: border-box; */
+            }
 
-            /* div >p{
-                color:blue;   
-            } */
+            .question{
+                width: 250px;
+                height: 250px;
+                border: 1px solid blue;
+                /* padding: 10px;
+                padding: 20px 5px;
+                padding-left: 50px; */
 
-            /* div p{
-                color:blue;   
-            } */
+                margin: 10px;
+                margin: 20px 5px;
+                margin-left: 50px;
 
-            /* div + p{
-                color:blue;
-            } */
-
-            /* div ~ p{
-                color:blue;
-            } */
-
-            /* p:hover{
-                color:blue;
-            } */
-
-            /* p::first-letter{
-                color:red;
-                font-size: 24px;
-
-            } */
-
-            /* p::first-line{
-                color:blue;
-            } */
+                /* border-radius: 50%; */
+            }
         </style>
     </head>
     <body>
-        <!-- <div style="color:red; font-size: 24px;">Inline CSS</div> -->
-        <!-- <div>Internal CSS</div> -->
-        <!-- <div>External CSS</div> -->
-
-        <!-- <h1>
-            CSS Selector
-        </h1>
-
-        <div class="blue">
-            Class Seclector 1
-        </div>
-
-        <div class="blue1">
-            Class Seclector 2
-        </div>
-
-        <div id="blue">
-            Id Seclector
+        <!-- <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
+                iure?</p>
         </div> -->
 
-        <!-- <div class="m1 m2 m3">Select me</div>
-        <div class="m1">Don't select me</div>
-        <div class="m2">Don't select me</div> -->
-
-        <!-- <input type="text" value="Hello" />
-        <input type="number" /> -->
-
-        <!-- <div>
-            <p>Select Me</p>
-        </div>
-        <div>Don't select me</div>
-        <p>Don't select me</p> -->
-
-        <!-- <div>
-            <p>Select Me</p>
-        </div>
-        <div>Don't select me</div>
-        <p>Don't select me</p>
-        <div>
-            <span>
-                <p>Select me</p>
-            </span>
+        <!-- <div class="padding">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus consequatur earum reiciendis doloremque ratione
+                voluptas quaerat! Modi necessitatibus placeat veritatis facere
+                distinctio in ea voluptatum quis, veniam, consequatur pro
+                incidunt.</span>
         </div> -->
 
-        <!-- <p>Don't Select me</p>
-        <div>Don't select me</div>
-        <p>Select me</p>
-        <p>Select me</p>
-        <div>
-            <p>Don't select me</p>
+        <!-- <div class="margin">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus consequatur earum reiciendis doloremque ratione
+                voluptas quaerat! Modi necessitatibus placeat veritatis facere
+                distinctio in ea voluptatum quis, veniam, consequatur pro
+                incidunt.</span>
+        </div> -->
+
+        <!-- <div class="box_Sizing">
+            <span>Box Sizing</span>
+        </div> -->
+
+        <div class="question">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Odio labore omnis, explicabo et doloremque assumenda quasi
+                deleniti, a voluptatibus, atque sit ipsam vitae amet quaerat
+                mollitia deserunt veniam cum. Officia?</span>
         </div>
-        <p>Select me</p> -->
-
-        <!-- <button>Click me</button> -->
-
-        <style>
-            /* unvisited link */
-            a:link {
-              color: red;
-            }
-            
-            /* visited link */
-            a:visited {
-              color: yellow;
-            }
-            
-            /* mouse over link */
-            a:hover {
-              color: hotpink;
-            }
-            
-            /* selected link */
-            a:active {
-              color: blue;
-            }
-            </style>
-            </head>
-            <body>
-            
-            <h2>Styling a link depending on state</h2>
-            
-            <p><b><a href="https://www.google.co.in">This is a link</a></b></p>
-            <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
-            <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
-
     </body>
 </html>

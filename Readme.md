@@ -1,23 +1,13 @@
-## CSS Selector
+## Box Model
 
-- Element selector
-- Class selector (.)
-- Id selector (#)
-- Grouping selector (,)
-- Universal selector (*)
-- Multiple class selector .m1.m2
-- Attribute selector input[value="Select me"]
+https://www.w3schools.com/css/css_boxmodel.asp
+- Content
+- Padding -> is Space between content and border
+- Border
+- Margin -> is outof border space
 
-#### CSS Combinators
-https://www.w3schools.com/css/css_combinators.asp
+## Box Sizing
 
-- Descendant combinator selector >
-- Child combinator selector .c1 .c2
-- Adjacent sibling selector +
-- General sibling selector ~
-
-#### Pseudo-class Selector (:)
-https://www.w3schools.com/css/css_pseudo_classes.asp
-
-#### Pseudo-element Selector (::)
-https://www.w3schools.com/css/css_pseudo_elements.asp
+https://medium.com/geekculture/whats-the-deal-with-box-sizing-c8840dc7da24
+- content-box
+- border-box 
