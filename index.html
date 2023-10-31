@@ -3,100 +3,156 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Box Model</title>
+        <title>Document</title>
         <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            div{
-                /* border-width: 5px;
-                border-color: red; 
-                border-style:solid; */
-
-                /* border: 1px solid blue; */
-
+            /* .box{
+                width: 200px;
+                border: 1px solid black;
+                height: 200px;
+                margin-top: 200px;
             }
 
-            /* .padding{
-                border: 5px solid blue; */
-                /* padding-top: 20px;
-                padding-bottom: 50px;
-                padding-right: 50px;
-                padding-left: 50px; */
+            .visible{
+                overflow: visible;
+            }
 
-                /* padding: 50px 100px 200px 20px; */
+            .hidden{
+                overflow: hidden;
+            } */
+
+            /* .scroll{ */
+                /* overflow: scroll; */
+                /* overflow: scroll; */
+                /* text-wrap: nowrap; */
             /* } */
 
-            /* .margin{ */
-                /* border: 1px solid blue; */
-                /* margin-top: 20px;
-                margin-bottom: 50px;
-                margin-right: 50px;
-                margin-left: 50px; */
+            /* .auto{
+                overflow: auto;
+            } */
 
-                /* margin: 50px 20px 100px 50px; */
-            /* } */
-
-            .box_Sizing{
-                /* border: 1px solid blue; */
-                /* background-color: lightblue;
-                width: 250px;
-                height: 250px;
-                padding: 10px;
-                border: 10px solid blue; */
-                /* box-sizing: content-box; */
-                /* box-sizing: border-box; */
+            .box{
+                background-color: aquamarine;
+                margin: 8px 0px;
             }
 
-            .question{
-                width: 250px;
-                height: 250px;
-                border: 1px solid blue;
-                /* padding: 10px;
-                padding: 20px 5px;
-                padding-left: 50px; */
+            /* .h1{
+                display: inline;
+                width: 500px;
+                height: 500px;
+            } */
 
-                margin: 10px;
-                margin: 20px 5px;
-                margin-left: 50px;
+            /* .h1{
+                display: block;
+                width: 500px;
+                height: 500px;
+            } */
 
-                /* border-radius: 50%; */
+            /* .b{
+                display: block;
+                width: 2000px;
+            } */
+
+            /* .h1{
+                display: inline;
+                margin:50px 50px;
+                padding: 50px 50px;
+            } */
+
+            /* .b{
+                display: inline-block;
+                margin:50px 50px;
+                padding: 500px 200px;
+            } */
+
+            .parent{
+                color:green;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .child{
+                color: blue;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            }
+
+            .c2{
+                color: inherit;
+                font-family: inherit;
+            }
+
+            .box{
+                /* text-align:justify; */
             }
         </style>
     </head>
     <body>
-        <!-- <div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-                iure?</p>
+        <!-- <div class="box visible">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi ipsa quod iste ex nostrum blanditiis labore tempora
+                eius sapiente necessitatibus harum, dolorem a sequi consequatur
+                deserunt rerum earum eum dolorum. Repellat fugiat voluptas
+                facilis quae? Praesentium dolore incidunt necessitatibus! Sint
+                architecto optio laboriosam voluptatem atque odit fugiat
+                corporis enim quos?</p>
+        </div>
+
+        <div class="box hidden">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi ipsa quod iste ex nostrum blanditiis labore tempora
+                eius sapiente necessitatibus harum, dolorem a sequi consequatur
+                deserunt rerum earum eum dolorum. Repellat fugiat voluptas
+                facilis quae? Praesentium dolore incidunt necessitatibus! Sint
+                architecto optio laboriosam voluptatem atque odit fugiat
+                corporis enim quos?</p>
+        </div>
+
+        <div class="box scroll">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi ipsa quod iste ex nostrum blanditiis labore tempora
+                eius sapiente necessitatibus harum, dolorem a sequi consequatur
+                deserunt rerum earum eum dolorum. Repellat fugiat voluptas
+                facilis quae? Praesentium dolore incidunt necessitatibus! Sint
+                architecto optio laboriosam voluptatem atque odit fugiat
+                corporis enim quos?</p>
+        </div>
+
+        <div class="box auto">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi ipsa quod iste ex nostrum blanditiis labore tempora
+                eius sapiente necessitatibus harum, dolorem a sequi consequatur
+                deserunt rerum earum eum dolorum. Repellat fugiat voluptas
+                facilis quae? Praesentium dolore incidunt necessitatibus! Sint
+                architecto optio laboriosam voluptatem atque odit fugiat
+                corporis enim quos?</p>
         </div> -->
 
-        <!-- <div class="padding">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus consequatur earum reiciendis doloremque ratione
-                voluptas quaerat! Modi necessitatibus placeat veritatis facere
-                distinctio in ea voluptatum quis, veniam, consequatur pro
-                incidunt.</span>
+        <!-- block element -->
+        <!-- <div class="box">
+            Block Element
         </div> -->
 
-        <!-- <div class="margin">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus consequatur earum reiciendis doloremque ratione
-                voluptas quaerat! Modi necessitatibus placeat veritatis facere
-                distinctio in ea voluptatum quis, veniam, consequatur pro
-                incidunt.</span>
-        </div> -->
+        <h1 class="box h1">
+            H1 Element
+        </h1>
 
-        <!-- <div class="box_Sizing">
-            <span>Box Sizing</span>
-        </div> -->
+        <!-- <hr/> -->
 
-        <div class="question">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Odio labore omnis, explicabo et doloremque assumenda quasi
-                deleniti, a voluptatibus, atque sit ipsam vitae amet quaerat
-                mollitia deserunt veniam cum. Officia?</span>
+        <!-- <b class="box b"> inline element</b> -->
+
+        <!-- <span class="box">
+            inline Element
+        </span> -->
+
+        <div class="parent">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus,
+            maxime!
+            <p class="child c1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi, molestias?
+            </p>
+            <p class="child c2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Excepturi, molestias?
+            </p>
         </div>
     </body>
 </html>

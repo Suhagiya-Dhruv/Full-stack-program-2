@@ -1,13 +1,30 @@
-## Box Model
+## Overflow
 
-https://www.w3schools.com/css/css_boxmodel.asp
-- Content
-- Padding -> is Space between content and border
-- Border
-- Margin -> is outof border space
+- visible
+- hidden
+- scroll
+- auto
 
-## Box Sizing
+## Display
 
-https://medium.com/geekculture/whats-the-deal-with-box-sizing-c8840dc7da24
-- content-box
-- border-box 
+- inline
+- block
+- inline-block
+
+| styles     | Inline | Block | Inline-Block |
+| ---------- | ------ | ----- | ------------ |
+| width      | NO     | YES   | YES          |
+| height     | NO     | YES   | YES          |
+| v. margin  | NO     | YES   | YES          |
+| h. margin  | YES    | YES   | YES          |
+| v. padding | YES    | YES   | YES          |
+| h. padding | YES    | YES   | YES          |
+
+## Inheritance
+
+- color
+- font-family
+- font-size
+- font-weight
+- font-style
+- line-height
