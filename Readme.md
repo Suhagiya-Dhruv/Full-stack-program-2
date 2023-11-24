@@ -1,13 +1,5 @@
-## Position
+## Flex
 
-- static // by default
-- relative
-- absolute
-- fixed
-- stcity
+https://flexboxfroggy.com/
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/position
-
-## Z-index
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/#alignment-3
