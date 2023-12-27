@@ -1,19 +1,21 @@
 ## Data type in JS
 
-1. Primitive data types
+1. Primitive data types (Pervious Lecture)
+2. Non-primitive data types
 
-- Undefined
-- Null
-- Boolean
-- Number
-- String
-  1. How can we create
-     > '' - Single quotes | "" - Double quotes | `` - template literals (backtick character)
-  2. Basic property of String
-     - split
-     - charAt
-     - concat
-     - length
-     - trim
-     - etc...[https://www.w3schools.com/jsref/jsref_obj_string.asp]
-- Symbol (Learn in future)
+- Object
+   1. How to create
+   2. How to read
+      - dot notation
+      - bracket notation
+   3. How to update
+   4. How to delete
+- Array
+  1. How to create
+  2. Basic property of Array
+     - join
+     - push
+     - pop
+     - unshift
+     - shift
+     - etc...[https://www.w3schools.com/jsref/jsref_obj_array.asp]
