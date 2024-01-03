@@ -1,21 +1,37 @@
-## Data type in JS
+## How execute js file
 
-1. Primitive data types (Pervious Lecture)
-2. Non-primitive data types
+1. Travels Object
+2. Travels Array
+3. var
+   - declaration (**✓**)
+   - assignment/initialzation (**✓**)
+   - re intialization (**✓**)
+   - re declaration (**✓**)
 
-- Object
-   1. How to create
-   2. How to read
-      - dot notation
-      - bracket notation
-   3. How to update
-   4. How to delete
-- Array
-  1. How to create
-  2. Basic property of Array
-     - join
-     - push
-     - pop
-     - unshift
-     - shift
-     - etc...[https://www.w3schools.com/jsref/jsref_obj_array.asp]
+4. let (ES6)
+   - declaration (**✓**)
+   - assignment/initialzation (**✓**)
+   - re intialization (**✓**)
+   - re declaration (**✕**)
+
+5. const (ES6)
+   - declaration (**✕**)
+   - assignment/initialzation (**✓**)
+   - re intialization (**✕**)
+   - re declaration (**✕**)
+
+6. Function
+   - Normal Function
+   - Function expression
+
+7. What is Call Stack
+
+8. Execution Context
+   - global scope
+   - local scope
+
+9. Phase
+   - Memory creation phase
+   - Code execution phase
+
+10. Hoisting
