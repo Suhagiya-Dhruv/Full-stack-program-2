@@ -1,49 +1,88 @@
-### Shallow Copy and Deep Copy
+### 1. Closures
 
-In JavaScript, when working with arrays or objects, it's important to understand the difference between shallow copy and deep copy.
+In JavaScript, a closure is a function that has access to the variables and parameters of its outer (enclosing) function, even after that outer function has completed execution. Closures are a powerful and fundamental concept in JavaScript.
 
-- **Shallow Copy**: A shallow copy of an array or object creates a new reference to the original array or object. It copies the top-level structure but still references the same nested objects or arrays. Changes in the nested structures affect both the original and the copy.
+#### Example:
 
-- **Deep Copy**: A deep copy, on the other hand, creates a completely independent copy of the original array or object. It recursively copies all nested structures, ensuring that changes to the copy do not affect the original.
+```javascript
+function outer() {
+  const outerVar = 'I am from the outer function';
 
-### Higer Order Function
+  function inner() {
+    console.log(outerVar); // Accesses outerVar from the outer function
+  }
 
-In JavaScript, you can define Higher-Order Functions (HoFs) that either take a function as an argument and return a value or take a value as an argument and return a function. Here are examples of both scenarios:
+  return inner;
+}
 
-1. **Take a function as an argument and return a value**:
+const innerFn = outer();
+innerFn(); // Logs "I am from the outer function"
+```
 
-   ```javascript
-   function applyOperation(value, operation) {
-     return operation(value);
-   }
+### 2. Truthy Value vs. Falsy Value
 
-   function double(x) {
-     return x * 2;
-   }
+In JavaScript, values are evaluated as either "truthy" or "falsy" when used in conditions. Understanding these concepts is crucial when writing conditional statements.
 
-   const result = applyOperation(5, double);
-   // result is 10
-   ```
+- **Truthy Values**: Values that are considered true when evaluated in a Boolean context. Examples include `true`, non-empty strings, numbers other than `0`, objects, arrays, and functions.
 
-   In this example, `applyOperation` takes a value and a function (`operation`) as arguments and applies the function to the value, returning the result.
+- **Falsy Values**: Values that are considered false when evaluated in a Boolean context. Examples include `false`, `0`, `null`, `undefined`, `NaN`, and empty strings.
 
-2. **Take a value as an argument and return a function**:
+#### Example:
 
-   ```javascript
-   function createMultiplier(factor) {
-     return function (value) {
-       return value * factor;
-     };
-   }
+```javascript
+const truthyValue = 'Hello';
+const falsyValue = 0;
 
-   const double = createMultiplier(2);
-   const triple = createMultiplier(3);
+if (truthyValue) {
+  console.log('Truthy value is true');
+}
 
-   const result1 = double(5);
-   // result1 is 10
+if (!falsyValue) {
+  console.log('Falsy value is false');
+}
+```
 
-   const result2 = triple(5);
-   // result2 is 15
-   ```
+### 3. `==` vs. `===`
 
-   In this example, `createMultiplier` takes a value (`factor`) and returns a new function that multiplies its argument by that factor. This allows you to create specialized functions (e.g., `double` and `triple`) based on a common pattern.
+In JavaScript, both `==` (loose equality) and `===` (strict equality) are used to compare values. However, they behave differently:
+
+- `==` checks for equality after performing type coercion, which can lead to unexpected results.
+- `===` checks for strict equality without type coercion.
+
+#### Example:
+
+```javascript
+const num = 5;
+const str = '5';
+
+console.log(num == str);  // true (coerced equality)
+console.log(num === str); // false (strict equality)
+```
+
+### 4. Object Methods: `preventExtensions`, `seal`, and `freeze`
+
+JavaScript provides methods to control the mutability and properties of objects.
+
+- `Object.preventExtensions(obj)`: Prevents the addition of new properties to an object but allows modifying or deleting existing properties.
+
+- `Object.seal(obj)`: Prevents the addition of new properties and makes all existing properties non-configurable. You can still modify existing values.
+
+- `Object.freeze(obj)`: Prevents adding, modifying, or deleting properties. It also makes all properties non-writable and non-configurable.
+
+#### Example:
+
+```javascript
+const person = { name: 'John', age: 30 };
+
+Object.preventExtensions(person);
+person.city = 'New York'; // Won't add 'city' property
+
+Object.seal(person);
+person.city = "New York"; // Won't add 'city' property
+delete person.age; // Won't delete 'age' property
+
+Object.freeze(person);
+person.city = "New York"; // Won't add 'city' property
+person.name = 'Jane'; // Won't change 'name' property
+delete person.age; // Won't delete 'age' property
+```
