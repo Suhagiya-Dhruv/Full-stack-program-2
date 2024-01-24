@@ -1,94 +1,76 @@
+// console.log("1 event");
 
-// function outer() {
+// setTimeout(()=>{
+//     console.log("2 event");
+// },5000) // time milisecond
 
-//     var a = 10;
 
-//     function run() {
-//         a++;
-//         return a;
-//     }
 
-//     return run;
+// setTimeout(()=>{
+//     console.log("2.1 event");
+// },2000) // time milisecond
+
+// function run(){
+//     console.log("3 event");
 // }
 
-// const value = outer() // run()
-// console.log(value());
-// console.log(value());
-// console.log(value());
-// console.log(value());
-// value()
-// value()
-// value()
-// value()
-
-// console.log(a);
+// run();
 
 
-// if(0){ // false
-//     console.log("Ans 0");
+// console.log("4 event");
+
+// let i = 0;
+// function callFn(){
+//     console.log("event",i++)
 // }
 
-// if(1){ // true
-//     console.log("Ans 1");
+// const jonh = setInterval(callFn, 500);
+
+// const value = setTimeout(()=>{
+//     clearInterval(jonh);
+// },5000)
+
+// clearTimeout(value);
+
+// callFn();
+
+// console.log("Step 1")
+
+// function p(resolve, reject) { // a => resolve, b => reject
+//     reject("No")
 // }
 
+// const promise = new Promise(p).then(data => data).catch(data => data);
 
-// if(""){ // false
-//     console.log("Empty string");
+// console.log(promise)
+
+// async/await
+
+// async function run() {
+//     const promise = await new Promise(p).then(data => data).catch(data => data);
+//     console.log(promise)
 // }
 
-// if("a"){ // true
-//     console.log("not empty string")
+// run();
+
+//API
+
+// [] => html CSS
+//  request -> email/password
+
+
+
+//  response -> YEs
+// [] => database
+
+
+// API => https://fakestoreapi.com/products/1
+
+// async function product(id){
+
+//     const a = await fetch(`https://fakestoreapi.com/products/${id}`)
+//     const data = await a.json();
+//     console.log(data)
 // }
 
-// if(true){
-//     console.log("Yes")
-// }
-
-// if(false){
-//     console.log("no");
-// }
-
-// if({}){ // true
-//     console.log("Object")
-// }
-
-// if([]){ // true
-//     console.log("Array")
-// }
-
-// if (null) { // false
-//     console.log("Falsy")
-// }
-
-// if (undefined) { // false
-//     console.log("Falsy")
-// }
-
-// if (NaN) { // not a number
-//     console.log("Falsy")
-// }
-
-
-const a = {
-    a:"123",
-    b:'456',
-    c:{
-        a:15
-    }
-}
-
-// Object.preventExtensions(a); // add not allow , delete allow, change allow
-// a.c = "789";
-// delete a.b;
-
-// Object.seal(a); // add not allow, delete not allow, change allow
-
-// a.a = "789";
-// delete a.b;
-
-// Object.freeze(a); // add not allow, delete not allow, change not allow
-
-// delete a.a;
-
-// console.log(a)
+// product(15)
