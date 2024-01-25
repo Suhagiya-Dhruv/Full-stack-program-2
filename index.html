@@ -4,11 +4,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <!-- <link rel="icon" type="image/x-icon"
-            href="https://pixsector.com/cache/517d8be6/av5c8336583e291842624.png"> -->
     </head>
     <body>
-        <h1>Script</h1>
+        <!-- <h1 id="d3" class="h1">DOM 1</h1>
+        <h2 id="3" class="class2">DOM 2</h2>
+        <h1 id="3" class="class3">DOM 3</h1> -->
+        <h1>Click :
+            <span>0</span></h1>
+        <button onclick="call()"> +</button>
     </body>
-    <script src="./script.js"></script>
+    <script>
+        
+        // const a = document.getElementById("3") // unique    
+        // console.log(a)
+
+        // const a = document.getElementsByTagName("h1"); // return array
+        // console.log(a);
+
+        // const a = document.getElementsByClassName("class3"); // return array
+        // console.log(a);
+
+        // const a = document.querySelector("#d3"); // element
+        // console.log(a);
+
+        // const a = document.querySelectorAll("h1"); // element
+        // console.log(a);
+
+        let count = 0;
+
+        const a = document.querySelector("button");
+
+        const h1 = document.querySelector("span");
+
+        function call(){
+           h1.innerText = ++count;
+        }
+
+    </script>
 </html>
