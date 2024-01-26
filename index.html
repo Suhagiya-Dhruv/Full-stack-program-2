@@ -4,14 +4,51 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .green{
+                color:black;
+                background-color: green;
+            }
+
+            .black{
+                color:white;
+                background-color: black;
+            }
+            
+            div{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+        </style>
     </head>
     <body>
         <!-- <h1 id="d3" class="h1">DOM 1</h1>
         <h2 id="3" class="class2">DOM 2</h2>
         <h1 id="3" class="class3">DOM 3</h1> -->
-        <h1>Click :
-            <span>0</span></h1>
-        <button onclick="call()"> +</button>
+        <!-- <h1>Click :
+            <span>0</span></h1> -->
+        <!-- <button onclick="call()"> +</button>
+        <button onclick="call2()"> - </button>
+        <button onclick="call3()"> reset </button> -->
+
+        <!-- <button id="plus"> +</button>
+        <button id="minus"> - </button>
+        <button id="reset"> reset </button> -->
+        <div class="green">
+            <h1 id="mode"> Green Mode</h1>
+            <button onclick="changemode()">Change Mode</button>
+        </div>
+
     </body>
     <script>
         
@@ -30,15 +67,90 @@
         // const a = document.querySelectorAll("h1"); // element
         // console.log(a);
 
-        let count = 0;
+        // let count = 0;
 
-        const a = document.querySelector("button");
+        // const h1 = document.querySelector("span");
 
-        const h1 = document.querySelector("span");
+        // function call(){
+        //    h1.innerText = ++count;
+        // }
 
-        function call(){
-           h1.innerText = ++count;
+        // function call2(){
+        //    h1.innerText = --count;
+        // }
+
+        // function call3(){
+        //    h1.innerText = count = 0;
+        // }
+
+        // let count = 0;
+
+        // const a = document.querySelectorAll("button");
+        // console.log(a)
+
+        // a.forEach(value => {
+        //     switch(value.id){
+        //         case 'plus':
+        //             value.addEventListener("click", call);
+        //             break;
+        //         case 'minus':
+        //             value.addEventListener("click", call2);
+        //             break;
+        //         default:
+        //             value.addEventListener("click", call3);
+        //             break;
+        //     }
+        // }
+        // );
+
+
+        // // const b = document.querySelector("#minus");
+
+        // // a.addEventListener('click',call);
+        // // b.addEventListener('click',call2);
+
+        // const h1 = document.querySelector("span");
+
+        // function call(){
+        //    h1.innerText = ++count;
+        // }
+
+        // function call2(){
+        //    h1.innerText = --count;
+        // }
+
+        // function call3(){
+        //    h1.innerText = count = 0;
+        // }
+
+        const h1 = document.querySelector("#mode")
+        
+        function changemode(){
+            const div = document.querySelector("div");
+            const mode = div.className;
+            
+            console.log("mode inside", mode)
+            if(mode == "green"){
+                div.classList.remove("green");
+                div.classList.add('black');
+                h1.innerText = "Black Mode"
+            }else{
+                div.classList.remove("black");
+                div.classList.add('green');
+                h1.innerText = "Green Mode"
+            }
         }
+
+//         function changemode(){
+
+// if(mode == "green"){
+//     div.classList.remove("green");
+//     div.classList.add('black');
+// }else{
+//     div.classList.remove("black");
+//     div.classList.add('green');
+// }
+// }
 
     </script>
 </html>
