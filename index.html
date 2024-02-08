@@ -1,83 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
 <style>
-    *{
+    * {
         padding: 0;
         margin: 0;
     }
-    body{
+
+    body {
         background-color: aquamarine;
     }
-    div{
+
+    div {
         width: 100px;
         height: 100px;
         border: 1px solid;
     }
 </style>
+
 <body>
-    <button onclick="fn('red')">red</button>
-    <button onclick="fn('green')">green</button>
+    <input type="color" id="input">
     <div id="box">
-        
+
     </div>
 </body>
 <script>
-    // const box = document.querySelector("#box");
 
-    // box.addEventListener("mouseenter", mouseEnter);
-
-    // function mouseEnter(){
-    //     console.log("Mouse Entered");
-    // }
-
-    // box.addEventListener("mouseleave", mouseLeave);
-
-    // function mouseLeave(){
-    //     console.log("Mouse Leaved");
-    // }
-
-    // box.addEventListener("mousemove", mouseMove);
-
-    // function mouseMove(){
-    //     console.log("Mouse Moved");
-    // }
-
-    // box.addEventListener("mouseup", mouseUp);
-
-    // function mouseUp(){
-    //     console.log("Mouse Up");
-    // }
-
-    // box.addEventListener("mousedown", mouseDown);
-
-    // function mouseDown(){
-    //     console.log("Mouse Down");
-    // }
+    const input = document.querySelector('#input');
+    const box = document.querySelector('#box');
 
     let color = "transparent";
 
-    function fn(a){
-        color = a;
+
+    // input.addEventListener('change', fun)
+    input.addEventListener('input', fun)
+
+    function fun(event) {
+       color=event.target.value
+        box.style.backgroundColor = color;
     }
-
-    const fillBox = document.querySelector("#box");
-
-    fillBox.addEventListener("mouseenter",mouseEnter);
-
-    function mouseEnter(){
-        fillBox.style.backgroundColor = color
-    }
-
-    fillBox.addEventListener("mouseleave",mouseLeave);
-
-    function mouseLeave(){
-        fillBox.style.backgroundColor = "transparent"
-    }
-
 </script>
+
 </html>
