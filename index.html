@@ -1,91 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+        }
+        .starBox{
+            width: 50px;
+            aspect-ratio: 1/1;
+            border: 1px solid red;
+        }
+        .box-parent{
+            margin-top: 2rem;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            border: 1px solid;
+        }
+    </style>
 </head>
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-    }
-
-    body {
-        /* background-color: aquamarine; */
-    }
-
-    .div {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #box,
-    #box1,
-    #box2 {
-        margin-top: 300px;
-        width: 100px;
-        height: 100px;
-        border: 1px solid;
-    }
-</style>
-
 <body>
-    <div class="div">
-        <div>
-            <input type="color" id="input">
-            <div id="box">
-
-            </div>
-        </div>
-
-        <div>
-            <input type="color" id="input1">
-            <div id="box1">
-
-            </div>
-
-        </div>
+    <h1>Rating System</h1>
+    <div class="box-parent">
+        <div class="starBox" data-id="1"></div>
+        <div class="starBox" data-id="2"></div>
+        <div class="starBox" data-id="3"></div>
+        <div class="starBox" data-id="4"></div>
+        <div class="starBox" data-id="5"></div>
     </div>
 </body>
-<script>
 
-    const input = document.querySelector('#input');
-    const box = document.querySelector('#box');
-
-    let color = "transparent";
-
-
-    // input.addEventListener('change', fun)
-    input.addEventListener('input', fun)
-
-    function fun(event) {
-        color = event.target.value
-        box.style.backgroundColor = color;
-    }
-
-    const input1 = document.querySelector('#input1');
-    const box1 = document.querySelector('#box1');
-
-    input1.addEventListener('change', fun1)
-
-    let color1 = "transparent";
-
-    function fun1(event) {
-        color1 = event.target.value
-    }
-
-    box1.addEventListener('mouseenter', mouseEnter)
-    box1.addEventListener('mouseleave', mouseLeave)
-
-    function mouseEnter(event) {
-        box1.style.backgroundColor = color1;
-    }
-
-    function mouseLeave(event) {
-        box1.style.backgroundColor = "transparent";
-    }
-</script>
-
+<script src="./script.js"></script>
 </html>
