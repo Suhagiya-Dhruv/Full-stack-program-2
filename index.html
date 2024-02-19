@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ToDo List</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        h1{
+        h1 {
             text-align: center;
         }
-        .starBox{
-            width: 50px;
-            aspect-ratio: 1/1;
-            border: 1px solid red;
-        }
-        .box-parent{
-            margin-top: 2rem;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            border: 1px solid
-        }
-        .yellow{
-            background-color: yellow;
-        }
-        .green{
-            background-color: green;
+
+        .li {
+            color: red;
         }
     </style>
+
 </head>
+
 <body>
-    <h1>Rating System</h1>
-    <div class="box-parent">
-        <div class="starBox" data-id="1"></div>
-        <div class="starBox" data-id="2"></div>
-        <div class="starBox" data-id="3"></div>
-        <div class="starBox" data-id="4"></div>
-        <div class="starBox" data-id="5"></div>
-    </div>
+    <h1>TODO List</h1>
+    <input type="text" /><button onclick="itemAdd()">Submit</button>
+    <ul>
+       <li>Hello <button>Delete</button></li>
+    </ul>
 </body>
 
-<script src="./script.js"></script>
+<script>
+    const input = document.querySelector('input');
+    const ul = document.querySelector('ul');
+
+    function itemAdd() {
+
+
+        const li = document.createElement('li');
+        li.classList.add("li")
+        li.innerText = input.value;
+
+        const button = document.createElement('button');
+        button.innerText = "Delete";
+
+        li.appendChild(button)
+
+        ul.appendChild(li)
+
+        input.value = "";
+    }
+</script>
+
 </html>
