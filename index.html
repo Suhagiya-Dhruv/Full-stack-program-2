@@ -21,7 +21,10 @@
     <h1>TODO List</h1>
     <input type="text" /><button onclick="itemAdd()">Submit</button>
     <ul>
-       <li>Hello <button>Delete</button></li>
+        <li>mobile<button data-value="mobile">Delete</button></li>
+        <li>mobile<button data-value="mobile">Delete</button></li>
+        <li>mobile<button data-value="mobile">Delete</button></li>
+        <li>mobile<button data-value="mobile">Delete</button></li>
     </ul>
 </body>
 
@@ -29,8 +32,22 @@
     const input = document.querySelector('input');
     const ul = document.querySelector('ul');
 
-    function itemAdd() {
+    ul.addEventListener('click',deleteItem);
 
+    function deleteItem(event){
+        const {value } = event.target.dataset;
+
+        if(value){
+            for(let i=0;i<ul.children.length;i++){
+                if(ul.children[i].innerText.split("Delete")[0] === value){
+                    ul.children[i].remove();
+                    break;
+                }
+            }
+        }
+    }
+
+    function itemAdd() {
 
         const li = document.createElement('li');
         li.classList.add("li")
@@ -38,6 +55,7 @@
 
         const button = document.createElement('button');
         button.innerText = "Delete";
+        button.dataset.value = input.value
 
         li.appendChild(button)
 
