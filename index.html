@@ -4,65 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title></title>
     <style>
-        h1 {
-            text-align: center;
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
         }
 
-        .li {
-            color: red;
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
         }
     </style>
-
 </head>
 
 <body>
-    <h1>TODO List</h1>
-    <input type="text" /><button onclick="itemAdd()">Submit</button>
-    <ul>
-        <li>mobile<button data-value="mobile">Delete</button></li>
-        <li>mobile<button data-value="mobile">Delete</button></li>
-        <li>mobile<button data-value="mobile">Delete</button></li>
-        <li>mobile<button data-value="mobile">Delete</button></li>
-    </ul>
+    <div id="box">
+        <div id="box1">
+
+        </div>
+    </div>
 </body>
 
 <script>
-    const input = document.querySelector('input');
-    const ul = document.querySelector('ul');
+    const box = document.querySelector("#box");
+    // const box1 = document.querySelector("#box1");
 
-    ul.addEventListener('click',deleteItem);
+    // event bubbling
 
-    function deleteItem(event){
-        const {value } = event.target.dataset;
+    // document.addEventListener("click", (e)=>{
+    //     console.log("document")
+    // });
 
-        if(value){
-            for(let i=0;i<ul.children.length;i++){
-                if(ul.children[i].innerText.split("Delete")[0] === value){
-                    ul.children[i].remove();
-                    break;
-                }
-            }
-        }
-    }
+    // box.addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     console.log("parent box");
+    // });
 
-    function itemAdd() {
+    // box1.addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     console.log("child box");
+    // });
 
-        const li = document.createElement('li');
-        li.classList.add("li")
-        li.innerText = input.value;
+    box.addEventListener("click", (e) => {
+        //    alert("Alert")
+        // prompt("Prompt")
 
-        const button = document.createElement('button');
-        button.innerText = "Delete";
-        button.dataset.value = input.value
+        // confirm("Confirm")
+        // let a = "hello";
+        // console.log(a);
 
-        li.appendChild(button)
+        // a = btoa(a)
+        // console.log(a);
 
-        ul.appendChild(li)
+        // a = atob(a)
+        // console.log(a);
+        fetch('https://fakestoreapi.com/products/3').then((response) => response.json()).then((response) => console.log(response))
 
-        input.value = "";
-    }
+    });
+
+
 </script>
 
 </html>
