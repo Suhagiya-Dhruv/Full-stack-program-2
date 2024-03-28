@@ -1,12 +1,25 @@
-import { UserDetails } from "./UserDeails";
+import { useState } from "react";
 
 function App() {
 
-  return (
-    <>
-      <UserDetails name="Dhruv" city="surat" state="gujarat"/>
+  const [value, setValue] = useState(0); //Hook
 
-      <UserDetails name="Om" city="tapi" state="mumbai"/>
+  const increment = () => {
+    // value++;
+    // console.log(value);
+    setValue(value + 1)
+  }
+
+  const decrement = () => {
+    setValue(value - 1)
+  }
+
+  return ( // rendring -> render -> re-render
+    <>
+      <h1>State</h1>
+      <h1>count : {value}</h1>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>-</button>
     </>
   )
 }
